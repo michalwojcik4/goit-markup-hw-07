@@ -1,0 +1,24 @@
+.client{
+    &__list{
+        @include reset-list;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__icon{
+        display: block;
+        width: 170px;
+        height: 92px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        fill: getColor(client-icon);
+        border: 1px solid getColor(client-icon);
+        border-radius: 4px;
+        transition: fill $timetransition, border-color $timetransition;
+        &:hover,
+        &:focus{
+            fill: getColor(colorbrand);
+            border-color: getColor(colorbrand);
+        }
+    }
+}
