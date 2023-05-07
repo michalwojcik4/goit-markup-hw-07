@@ -6,8 +6,7 @@
     }
     &__icon{
         display: block;
-        width: 170px;
-        height: 92px;
+        @include size-wh(170px, 92px);
         display: flex;
         justify-content: center;
         align-items: center;
