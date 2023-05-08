@@ -1,22 +1,26 @@
-.strengths{
-    &__list{
+.strengths {
+
+    &__list {
         @include reset-list;
         display: flex;
         justify-content: space-between;
         gap: 30px;
     }
-    &__box{
+
+    &__box {
         display: flex;
         justify-content: center;
         padding: 25px 0;
         background-color: getColor(bg-strengths-box);
     }
-    &__title{
+
+    &__title {
         @include font-size(700, 14px, 1.14, 0.03em);
         text-transform: uppercase;
         margin: 30px 0 10px 0;
     }
-    &__text{
+
+    &__text {
         @include font-size(400, 14px, 1.714, 0.03em);
         color: getColor(text-grey);
         margin: 0;

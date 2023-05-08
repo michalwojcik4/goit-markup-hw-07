@@ -1,15 +1,18 @@
-.logo{
+.logo {
     font-family: $secondFont;
     text-decoration: none;
     @include font-size(700, 26px, 1.19, 0.03em);
-    &__span{
+
+    &__span {
         color: getColor(colorbrand);
     }
-    &--header{
+
+    &--header {
         margin-right: 93px;
         color: getColor(logoheader);
     }
-    &--footer{
+
+    &--footer {
         color: getColor(logofooter);
     }
 }

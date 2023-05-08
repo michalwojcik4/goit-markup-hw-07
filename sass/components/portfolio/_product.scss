@@ -1,44 +1,59 @@
-.product{
-    &__list{
+.product {
+
+    &__list {
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
         @include reset-list;
     }
-    &__item{
-        &:hover{
+
+    &__item {
+
+        &:hover {
             box-shadow: $portfolioproductshadow;
             transition: box-shadow $timetransition;        
         }
     }
-    &__link{
+
+    &__link {
         text-decoration: none;
+
+        &:hover .description-box,
+        &:focus .description-box {
+            transform: translatey(0);
+        }
     }
-    &__figure{
+
+    &__figure {
         margin: 0;
     }
-    &__figcaption{
+
+    &__figcaption {
         padding: 20px 23px 19px;
         border-left:1px solid getColor(product-figcaption-border);
         border-bottom:1px solid getColor(product-figcaption-border);
         border-right:1px solid getColor(product-figcaption-border);
     }
-    &__title{
+
+    &__title {
         @include font-size(700, 18px, 2, 0.06em);
         color: getColor(defaultFontColor);
         margin: 0 0 4px;
     }
-    &__text{
+
+    &__text {
         @include font-size(400, 16px, 1.875, 0.03em);
         color: getColor(text-grey);
         margin: 0;
     }
-    &__image{
+
+    &__image {
         position: relative;
         overflow: hidden;
     }
 }
-.description-box{
+
+.description-box {
     position: absolute;
     top: 0;
     left: 0;
@@ -47,14 +62,12 @@
     background-color: getColor(bg-description-box);
     transform: translateY(101%);
     transition: transform $timetransition;
-    &__text{
+
+    &__text {
         @include font-size(400, 18px, 1.555, 0.03em);
         color: getColor(text-white);
         margin: 0;
     }
 }
-.product__link:hover .description-box,
-.product__link:focus .description-box{
-    transform: translatey(0);
-}
+
 

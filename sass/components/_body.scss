@@ -1,0 +1,24 @@
+body {
+    font-family: $defaultFont;
+    color: getColor('defaultFontColor');
+    width: $bodywidth;
+}
+
+.container {
+    max-width: $maxwidthcontainer;
+    margin: 0 auto;
+}
+
+.section {
+    padding: $mainsectionpadding;
+}
+
+img { 
+    display: block;
+}
+
+.section-title {
+    @include font-size(700, 36px, 1.16, 0.03em);
+    text-align: center;
+    margin: 0 0 50px;
+}

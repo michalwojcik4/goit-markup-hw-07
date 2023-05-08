@@ -1,9 +1,10 @@
-.socialmedia{
+.socialmedia {
     @include reset-list;
     display: flex;
     justify-content: center;
     gap: 10px;
-    &__icon{
+
+    &__icon {
         display: block;
         @include size-wh(44px, 44px);
         display: flex;
@@ -11,19 +12,23 @@
         align-items: center;
         border-radius: 50%;
         transition: background-color $timetransition, fill $timetransition;
-        &--team{
+       
+        &--team {
             fill: getColor(socialmedia-icon);
+
             &:hover,
-            &:focus{
+            &:focus {
                 background-color: getColor(colorbrand);
                 fill: getColor(socialmedia-icon-hover);
             }
         }
-        &--footer{
+
+        &--footer {
             fill: getColor(socialmedia-icon-footer);
             background-color: getColor(bg-socialmedia-icon-footer);
+
             &:hover,
-            &:focus{
+            &:focus {
                 background-color: getColor(colorbrand);
             }
         }

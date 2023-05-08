@@ -14,7 +14,7 @@ $colors: (
     'socialmedia-icon': #AFB1B8,
     'socialmedia-icon-hover': #FFF,
     'socialmedia-icon-footer': #FFF,
-    'bg-socialmedia-icon-footer':(255, 255, 255, 0.1),
+    'bg-socialmedia-icon-footer': rgba(255, 255, 255, 0.1),
     'client-icon': #AFB1B8,
     'address-link': rgba(255, 255, 255, 0.6),
     'newsletter-form-color': rgba(255, 255, 255, 0.6),
@@ -30,9 +30,11 @@ $colors: (
     'contact-label': rgba(33, 33, 33, 0.2),
     'bg-color-btn-filter': #F5F4FA,
 );
+
 @function getColor($key) {
     @return map-get($colors, $key);
 }
+
 $defaultFont: Roboto, sans-serif;
 $secondFont: Raleway, sans-serif;
 $bodywidth: 100%;
@@ -48,26 +50,31 @@ $modalboxshadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14
 $teamfigureshadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 $portfoliofilterbuttonshadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 $portfolioproductshadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-@mixin reset-list{
+
+@mixin reset-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-@mixin font-size($font-weight, $font-size, $line-height, $letter-spacing){
+
+@mixin font-size($font-weight, $font-size, $line-height, $letter-spacing) {
     font-weight: $font-weight;
     font-size: $font-size;
     line-height: $line-height;
     letter-spacing: $letter-spacing;
 }
-@mixin size-wh($width, $height){
+
+@mixin size-wh($width, $height) {
     width: $width;
     height: $height;
 }
-@mixin reset-input{
+
+@mixin reset-input {
     outline: 0;
     border: 0;
 }
-%blue-buttons{
+
+%blue-buttons {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,53 +1,65 @@
-.background-footer{
+.background-footer {
     background-color: getColor(background-main-footer);
 }
-.footer{
+
+.footer {
     padding: 60px 15px;
     display: flex;
     justify-content: space-between;
     gap: 70px;
-}
-.footer-box{
-    &__title{
-        @include font-size(700, 14px, 1.142, 0.03em);
-        text-transform: uppercase;
-        color: getColor(text-white);
-        margin: 12px 0 20px;
+
+    &-box {
+
+        &__title {
+            @include font-size(700, 14px, 1.142, 0.03em);
+            text-transform: uppercase;
+            color: getColor(text-white);
+            margin: 12px 0 20px;
+        }
+
+        &--grow {
+            flex-grow: 1;
+        }
     }
-    &--grow{
-        flex-grow: 1;
-    }
 }
-.address{
+
+.address {
     font-style: normal;
     @include font-size(400, 14px, 1.71, 0.03em);
     color: getColor(text-white);
-    &__text{
+
+    &__text {
         margin: 20px 0 9px;
     }
-    &__list{
+
+    &__list {
         @include reset-list;
     }
-    &__link{
+
+    &__link {
         text-decoration: none;
         color: getColor(address-link);
         transition: color $timetransition;
+
         &:hover,
-        &:focus{
+        &:focus {
             color: getColor(colorbrand);
         }
     }
 }
-.newsletter-form{
+
+.newsletter-form {
     display: flex;
     justify-content: space-between;
     gap: 12px;
-    &__label{
+
+    &__label {
         flex-grow: 1;
         display: flex;
         align-items: center;
     }
-    &__input{
+
+    &__input {
         @include reset-input;
         @include font-size(400, 16px, 1.25, 0.03em);
         color: getColor(newsletter-form-color);
@@ -58,16 +70,19 @@
         border-radius: 4px;
         background-color: getColor(background-main-footer);
         transition: border-color $timetransition;
-        &:focus{
+
+        &:focus {
             border-color: getColor(colorbrand);
         }
-        &::placeholder{
+
+        &::placeholder {
             color: getColor(newsletter-form-color);
         }
     }
-    &__button{
+
+    &__button {
         @extend %blue-buttons;
-        padding: 13px 28px 13px 42px;
+        padding: 10px 28px 10px 42px;
         gap:24px;
     }
 }

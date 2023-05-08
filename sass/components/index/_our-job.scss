@@ -1,15 +1,18 @@
-.our-job{
+.our-job {
     padding-top: 94px;
-    &__list{
+
+    &__list {
         @include reset-list;
         display: flex;
         justify-content: space-between;
         gap: 30px;
     }
-    &__item{
+
+    &__item {
         position: relative;
     }
-    &__text{
+
+    &__text {
         position: absolute;
         bottom:0;
         right: 0;

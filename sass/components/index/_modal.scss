@@ -1,4 +1,4 @@
-.backdrop{
+.backdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -8,13 +8,15 @@
     opacity: 1;
     animation: opacityopen $timetransition forwards;
 }
-.is-hidden{
+
+.is-hidden {
     visibility: hidden;
     pointer-events: none;
     opacity: 0;
     animation: opacityclose $timetransition forwards;
 }
-.modal{
+
+.modal {
     z-index: 2;
     position: absolute;
     top: 50%;
@@ -24,7 +26,8 @@
     box-shadow: $modalboxshadow;
     border-radius: 4px;
     padding: 40px;
-    &__button-close{
+
+    &__button-close {
         position: absolute;
         display: flex;
         justify-content: center;
@@ -40,30 +43,36 @@
         background-color: getColor(modal-bg-button-close);
         border: 1px solid rgba(0, 0, 0, 0.1);
         transition: background-color $timetransition, fill $timetransition;
+
         &:hover,
-        &:focus{
+        &:focus {
             background-color: getColor(colorbrand);
             fill: getColor(modal-button-close-hover);
         }
     }
-    &__title{
+
+    &__title {
         @include font-size(700, 20px, 1.15, 0.03em);
         text-align: center;
         margin: 0 0 12px;
     }
 }
-.focuslabel{
+
+.focuslabel {
     fill: getColor(colorbrand);
     border-color: getColor(colorbrand);
     transition: border-color $timetransition, fill $timetransition;
 }
-.contact-details{
-    &__text{
+
+.contact-details {
+
+    &__text {
         margin: 0;
         @include font-size(400, 12px, 1.166, 0.01em);
         color: getColor(text-grey);
     }
-    &__label{
+
+    &__label {
         display: flex;
         align-items: center;
         gap:9px;
@@ -71,11 +80,13 @@
         border-radius: 4px;
         margin: 4px 0 10px;
         padding: 8px 9px;
-        &:focus-within{
+
+        &:focus-within {
             @extend .focuslabel;
         }
     }
-    &__input{
+
+    &__input {
         flex-grow: 1;
         @include font-size(400, 12px, 1.166, 0.01em);
         outline: 0;
@@ -83,66 +94,80 @@
         fill: getColor(defaultFontColor);
     }
 }
-.contact-comment{
-    &__text{
+
+.contact-comment {
+
+    &__text {
         margin: 0;
         @include font-size(400, 12px, 1.166, 0.01em);
         color: getColor(text-grey);
     }
-    &__label{
+
+    &__label {
         display: block;
         border: 1px solid getColor(contact-label);
         border-radius: 4px;
         padding: 12px 16px;
         margin: 4px 0 20px;
         min-height: 120px;
-        &:focus-within{
+
+        &:focus-within {
             @extend .focuslabel;
         }
     }
-    &__textarea{
+
+    &__textarea {
         @include reset-input;
         width: 100%;
         resize: none;
     }
 }
-.contact-checkbox{
+
+.contact-checkbox {
     display: flex;
     align-items: center;
     gap: 7px;
     padding: 0 14px 30px;
     margin: 0;
-    &__input{
+
+    &__input {
         -moz-appearance: none;
         -webkit-appearance: none;
         appearance: none;
-        &:checked + .contact-checkbox__icon{
+
+        &:checked + .contact-checkbox__icon {
             background-color: getColor(colorbrand);
             transition: background-color $timetransition;
             @include reset-input;
         }
     }
-    &__icon{
+
+    &__icon {
         fill: getColor(text-white);
-        padding: 4px 2px 3px 3px;
-        border: 3px solid getColor(defaultFontColor);
+        padding: 2px;
+        border: 1px solid getColor(defaultFontColor);
         border-radius: 2px;
-        cursor: $focuscursor;
+        cursor: $hovercursor;
     }
-    &__text{
+
+    &__text {
         @include font-size(400, 14px, 1.714, 0.03em);
         color: getColor(text-grey);
+        margin: 0;
     }
-    &__link{
+
+    &__link {
         margin: 0;
         @include font-size(400, 14px, 1.714, 0.03em);
         color: getColor(colorbrand);
     }
  }
- .contact-form__button{
+
+ .contact-form__button {
     @extend %blue-buttons;
     padding: 10px 76px;
 }
+
 @keyframes opacityopen {
     0%{
         opacity: 0;
@@ -151,6 +176,7 @@
         opacity: 1;
     }
 }
+
 @keyframes opacityclose {
     0%{
         opacity: 1;
